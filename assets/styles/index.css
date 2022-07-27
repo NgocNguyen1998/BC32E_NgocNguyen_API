@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+    box-sizing: border-box;
+    color: #404040;
+    font-size: 1rem;
+}
+.form-group p:first-child{
+    font-size: 1.35rem;
+    color: grey;
+    margin-bottom: 0.2rem;
+}
+.table thead th{
+    color: rgba(255, 255, 1, 0.765);
+}
+#tblProduct i{
+    color: aliceblue;
+    font-size: 0.7rem;
+}
+#tblProduct img{
+    height: 60px;
+    width: 60px;
+}

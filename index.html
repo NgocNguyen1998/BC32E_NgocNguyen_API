@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>EXAXIOS</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css
+
+
+
+  ">
+    <link rel="stylesheet" href="./assets/styles/index.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="container-fluid p-3 mb-2 bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand display-2" href="#">Cybersoft</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Home </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Form <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            Sport
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="topContent container">
+            <hr>
+            <p>Home/Products/Create</p>
+            <hr>
+        </div>
+        <div class="Content">
+            <h2>Create product</h2>
+            <h3 class="bg-dark mb-5 mt-2 text-warning display-6 pt-2 pb-2 pl-2">Product info</h3>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <p>id</p>
+                        <input id="id" class="form-control " placeholder="product id">
+                        <p class="text text-danger" id="errId"></p>
+                        <p class="text text-danger" id="err_numberId"></p>
+
+                    </div>
+                    <div class="form-group">
+                        <p>name</p>
+                        <input id="name" class="form-control" placeholder="product name">
+                        <p class="text text-danger" id="errName"></p>
+
+                    </div>
+                    <div class="form-group">
+                        <p>price</p>
+                        <input id="price" class="form-control" placeholder="product price">
+                        <p class="text text-danger" id="errPrice"></p>
+                        <p class="text text-danger" id="errNumberPrice"></p>
+
+
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="form-group">
+                        <p>image</p>
+                        <input id="image" class="form-control" placeholder="product image link">
+                        <p class="text text-danger" id="errImg"></p>
+
+                    </div>
+                    <div class="form-group ">
+                        <p>ProductType</p>
+                        <select id="ProductType" class="form-control">
+                            <option>mobile</option>
+                            <option>laptop</option>
+                            <option>tablet</option>
+
+                        </select>
+
+                    </div>
+                    <div class="form-group">
+                        <p>Description</p>
+                        <input id="productDescription" class="form-control pb-5 pt-3" placeholder="product description">
+                        <p class="text text-danger" id="errDescription"></p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row container mt-3">
+                <div class=" pl-2 text-center">
+                    <button class="btn btn-primary" id="btnCreate">Create</button>
+                    <button class="btn btn-success" id="btnUpdate">Update</button>
+                </div>
+                
+            </div>
+            <div class="mt-4 pl-2 text-center ">
+               <br>
+                    <input class="form-control mr-sm-2 " type="search" placeholder="Search By Name" aria-label="Search" id="idSearch">
+                    <p class="text text-danger mt-2" id="nameSearch"></p>
+                   
+                    
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnSearch">Search</button>
+              
+            </div>
+            <table class="table mt-5">
+                <thead style="color: yellow; background-color:grey;">
+                    <tr>
+                        <th>id</th>
+                        <th>image</th>
+                        <th>name</th>
+                        <th>price</th>
+                        <th>description</th>
+                        <th>type</th>
+                        <th>note</th>
+                    </tr>
+                </thead>
+                <tbody id="tblProduct">
+
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+        integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./methods/method.js"></script>
+    <script src="./models/Product.js"></script>
+    <script src="./controllers/index.js"></script>
+</body>
+
+</html>
