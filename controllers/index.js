@@ -140,13 +140,14 @@ document.querySelector('#btnUpdate').onclick = function () {
 //----------------SearchByName------------
 document.querySelector('#btnSearch').onclick = function () {
     var nameValue = document.querySelector('#idSearch').value;
+    var nameSearch = nameValue.toLocaleLowerCase();
     var valid = true;
     valid = kiemTraRong(nameValue, '#nameSearch', 'Name ');
     if (!valid) {
         return;
     }
     var promise = axios({
-        url: 'http://svcy.myclass.vn/api/Product/SearchByName?name=' + nameValue,
+        url: 'http://svcy.myclass.vn/api/Product/SearchByName?name=' + nameSearch,
         method: 'GET',
     });
     promise.then(function (result) {
